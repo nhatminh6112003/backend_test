@@ -7,43 +7,44 @@ import { urlencoded, json } from 'express';
 import { useContainer } from 'class-validator';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import cors from 'cors';
+
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
 
-  // const config = new DocumentBuilder()
-  //   .setTitle('Cats example')
-  //   .setDescription('The cats API description')
-  //   .setVersion('1.0')
-  //   .addTag('cats')
-  //   .build();
-  // const document = SwaggerModule.createDocument(app, config);
-  // SwaggerModule.setup('api', app, document);
-  // app.enableCors();
+  const config = new DocumentBuilder()
+    .setTitle('Cats example')
+    .setDescription('The cats API description')
+    .setVersion('1.0')
+    .addTag('cats')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
+  app.enableCors();
 
-  // app.useGlobalPipes(
-  //   new ValidationPipe({
-  //     whitelist: true,
-  //     transform: true,
-  //     forbidNonWhitelisted: true,
-  //     transformOptions: {
-  //       enableImplicitConversion: true,
-  //     },
-  //   }),
-  // );
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+      transform: true,
+      forbidNonWhitelisted: true,
+      transformOptions: {
+        enableImplicitConversion: true,
+      },
+    }),
+  );
 
-  // app.use(json({ limit: '50mb' }));
+  app.use(json({ limit: '50mb' }));
 
-  // app.use(urlencoded({ limit: '50mb', extended: true }));
+  app.use(urlencoded({ limit: '50mb', extended: true }));
 
-  // app.use(
-  //   helmet({
-  //     contentSecurityPolicy: false,
-  //   }),
-  // );
+  app.use(
+    helmet({
+      contentSecurityPolicy: false,
+    }),
+  );
 
-  // app.use(morgan('dev'));
+  app.use(morgan('dev'));
 
-  // useContainer(app.select(AppModule), { fallbackOnErrors: true });
+  useContainer(app.select(AppModule), { fallbackOnErrors: true });
 
   const port = process.env.PORT || 5000;
 
