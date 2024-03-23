@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { SupabaseService } from 'src/services/supabase.service';
-import { OrderItemService } from 'src/services/order-item.service';
-import { OrderItemsRepository } from 'src/repositories/order_item.repository';
-import { OrdersItemController } from 'src/controllers/orders-item.controller';
+import { SupabaseService } from '../services/supabase.service';
+import { OrderItemService } from '../services/order-item.service';
+import { OrderItemsRepository } from '../repositories/order_item.repository';
+import { OrdersItemController } from '../controllers/orders-item.controller';
 @Module({
   controllers: [OrdersItemController],
   providers: [OrderItemsRepository, OrderItemService, SupabaseService],

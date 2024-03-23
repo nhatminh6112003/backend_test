@@ -5,7 +5,7 @@ import {
 } from '@nestjs/common';
 import { SupabaseService } from './supabase.service';
 import * as bcrypt from 'bcrypt';
-import { CustomersRepository } from 'src/repositories/customers.repository';
+import { CustomersRepository } from '../repositories/customers.repository';
 @Injectable()
 export class CustomersService {
   constructor(

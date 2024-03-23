@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateCustomerDto } from 'src/dtos/customers.dto';
-import { SupabaseService } from 'src/services/supabase.service';
+import { CreateCustomerDto } from '../dtos/customers.dto';
+import { SupabaseService } from '../services/supabase.service';
 
 @Injectable()
 export class CustomersRepository {

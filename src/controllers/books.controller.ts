@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Post, Query } from '@nestjs/common';
-import { BooksService } from 'src/services/books.service';
+import { BooksService } from '../services/books.service';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { CreateBookDto } from '../dtos/books.dto';
 import { FindManyBooksQueryParams } from '../types/types';

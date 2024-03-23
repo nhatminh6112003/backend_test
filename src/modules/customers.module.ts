@@ -1,9 +1,9 @@
 // supabase.module.ts
 import { Module } from '@nestjs/common';
-import { CustomersService } from 'src/services/customers.service';
-import { SupabaseService } from 'src/services/supabase.service';
-import { CustomersController } from 'src/controllers/customers.controller';
-import { CustomersRepository } from 'src/repositories/customers.repository';
+import { CustomersService } from '../services/customers.service';
+import { SupabaseService } from '../services/supabase.service';
+import { CustomersController } from '../controllers/customers.controller';
+import { CustomersRepository } from '../repositories/customers.repository';
 
 @Module({
   controllers: [CustomersController],

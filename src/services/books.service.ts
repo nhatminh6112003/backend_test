@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { SupabaseService } from './supabase.service';
-import { BooksRepository } from 'src/repositories/books.repository';
+import { BooksRepository } from '../repositories/books.repository';
 @Injectable()
 export class BooksService {
   constructor(

@@ -2,8 +2,8 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { SupabaseService } from './supabase.service';
 import { CreateOrderDto } from '../dtos/orders.dto';
 import { CreateCustomerDto } from '../dtos/customers.dto';
-import { OrderItemsRepository } from 'src/repositories/order_item.repository';
-import { CreateOrderItemDto } from 'src/dtos/order-item.dto';
+import { OrderItemsRepository } from '../repositories/order_item.repository';
+import { CreateOrderItemDto } from '../dtos/order-item.dto';
 @Injectable()
 export class OrderItemService {
   constructor(

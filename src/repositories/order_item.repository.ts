@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateOrderItemDto } from 'src/dtos/order-item.dto';
-import { SupabaseService } from 'src/services/supabase.service';
+import { CreateOrderItemDto } from '../dtos/order-item.dto';
+import { SupabaseService } from '../services/supabase.service';
 
 @Injectable()
 export class OrderItemsRepository {

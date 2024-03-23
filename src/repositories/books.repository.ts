@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateBookDto } from 'src/dtos/books.dto';
-import { SupabaseService } from 'src/services/supabase.service';
+import { CreateBookDto } from '../dtos/books.dto';
+import { SupabaseService } from '../services/supabase.service';
 
 @Injectable()
 export class BooksRepository {

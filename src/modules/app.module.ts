@@ -5,8 +5,8 @@ import { SupabaseModule } from './supabase.module';
 import { BooksModule } from './books.module';
 import { OrdersModule } from './orders.module';
 import { OrdersItemModule } from './order_item.module';
-import { AppController } from 'src/controllers/app.controller';
-import { AppService } from 'src/services/app.service';
+import { AppController } from '../controllers/app.controller';
+import { AppService } from '../services/app.service';
 @Module({
   imports: [
     ConfigModule.forRoot(),
